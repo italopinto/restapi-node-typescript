@@ -1,0 +1,23 @@
+volumes:
+  psql:
+services:
+  psql:
+    image: postgres:latest
+    environment:
+      POSTGRES_USER: postgres
+      POSTGRES_PASSWORD: example
+      POSTGRES_DATABASE: postgres
+    volumes:
+      - psql:/var/lib/postgresql/data
+    ports:
+      - 5555:5432
+
+  api:
+    build:
+      context: .
+    env_file:
+      - .env
+    ports:
+      - 5000:5000
+    depends_on:
+      - psql
