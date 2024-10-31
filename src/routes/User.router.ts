@@ -10,7 +10,7 @@ const userController: UserController = new UserController(prisma);
 userRouter.get("/", async (req: Request, res: Response) => {
   /*
     #swagger.tags = ['User']
-    #swagger.summary = 'Returns a all users in database.'
+    #swagger.summary = 'Returns all users in database.'
   */
   await userController.getAllUsers(req, res);
 });
