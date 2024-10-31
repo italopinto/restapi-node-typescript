@@ -20,7 +20,7 @@ class UserController {
       return res.status(200).json(users);
     } catch (error) {
       console.error(error);
-      return res.status(500).send({ error: "Error fetching users!" });
+      return res.status(500).json({ error: "Error fetching users!" });
     }
   }
 
@@ -40,7 +40,7 @@ class UserController {
       return res.status(200).json(user);
     } catch (error) {
       console.error(error);
-      return res.status(500).send({ error: "Error fetching user!" });
+      return res.status(500).json({ error: "Error fetching user!" });
     }
   }
 
@@ -59,7 +59,7 @@ class UserController {
       return res.status(201).json(user);
     } catch (error) {
       console.error(error);
-      return res.status(500).send({ error: "Error creating user!" });
+      return res.status(500).json({ error: "Error creating user!" });
     }
   }
 
@@ -82,7 +82,7 @@ class UserController {
       return res.status(200).json(user);
     } catch (error) {
       console.error(error);
-      return res.status(500).send({ error: "Error updating user!" });
+      return res.status(500).json({ error: "Error updating user!" });
     }
   }
 
@@ -102,7 +102,7 @@ class UserController {
       return res.status(200).json(user);
     } catch (error) {
       console.error(error);
-      return res.status(500).send({ error: "Error deleting user!" });
+      return res.status(500).json({ error: "Error deleting user!" });
     }
   }
 }
