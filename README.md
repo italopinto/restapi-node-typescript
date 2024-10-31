@@ -17,12 +17,22 @@ Para executar a aplicação, será necessário ter Docker para build, execução
 
 Com o Docker instalado, vamos ao que interessa, executar a aplicação:
 
-1. Na pasta raiz do projeto, execute:
+1. Baixe o projeto:
+    ```bash
+    git clone https://github.com/italopinto/restapi-node-typescript.git
+    ```
+
+2. Navegue para a pasta do projeto:
+    ```bash
+    cd restapi-node-typescript
+    ```
+
+3. Na pasta raiz do projeto, execute:
     ```bash
     docker compose up -d --build
     ```
 
-2. Vá até https://localhost:5000/api-docs se o build deu certo, deve aparecer a página inicial do Swagger.
+4. Vá até https://localhost:5000/api-docs se o build deu certo, deve aparecer a página inicial do Swagger.
 
 ## Testar
 
