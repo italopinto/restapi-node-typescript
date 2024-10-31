@@ -10,6 +10,8 @@ COPY . .
 
 RUN npx prisma generate
 
+RUN npm run swagger
+
 RUN npm run build
 
 EXPOSE 5000

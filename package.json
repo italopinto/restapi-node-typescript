@@ -4,10 +4,10 @@
   "description": "Node RestAPI sample.",
   "main": "src/index.ts",
   "scripts": {
-    "dev": "ts-node-dev --inspect --transpile-only --ignore-watch node_modules src/index.ts",
-    "build": "tsc",
+    "dev": "ts-node-dev --inspect --resolveJsonModule --transpile-only --ignore-watch node_modules src/index.ts",
+    "build": "tsc --resolveJsonModule",
     "start": "node dist/index.js",
-    "swagger-autogen": "ts-node ./src/swagger.ts"
+    "swagger": "ts-node ./src/swagger.ts"
   },
   "author": "Italo Pinto",
   "license": "ISC",
