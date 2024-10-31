@@ -3,6 +3,7 @@
 Rest API escrita em Typescript para rodar em node.js.
 
 ## Pré-requisitos
+
 Para executar a aplicação, será necessário alguns softwares, para build, execução e uso.
 
 * **Docker**
@@ -19,16 +20,17 @@ Para executar a aplicação, será necessário alguns softwares, para build, exe
 
 
 ## Executar
+
 Com as ferramentas necessárias, vamos ao que interessa, executar a aplicação.
 
 1. Na pasta raiz do projeto, execute:
     ```bash
-    docker compose up -d
+    docker compose up -d --build
     ```
 
 2. Vá a https://localhost:5000/ se o build deu certo, deve aparecer a mensagem: 
-    ```json
-    { ok: "server up and running! }
+    ```bash
+    '{ "ok": "server up and running!" }'
     ```
 
 3. Se tudo funcionou prepare o postman, para testar os endpoints.
@@ -38,3 +40,10 @@ Com as ferramentas necessárias, vamos ao que interessa, executar a aplicação.
 Baixe a coleção do meu projeto [aqui](./assets/User%20API.postman_collection.json). Importe-o no seu Postman e execute as requisições previamente criadas.
 
 As requisições que precisam de corpo JSON, já estão configuradas, basta clicar no botão **Enviar** em cada requisição e tudo deve funcionar.
+
+## Desligar a app
+
+Para desligar a app, basta executar na pasta raiz:
+```bash
+docker compose down
+```
